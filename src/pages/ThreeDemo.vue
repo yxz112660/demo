@@ -23,7 +23,7 @@ let ws: WebSocket | null = null;
 
 // 创建 WebSocket 连接
 const createWebSocketConnection = () => {
-  ws = new WebSocket('ws://127.0.0.1:8090/api/websocket'); // 替换为你的 WebSocket 服务器地址
+  ws = new WebSocket('ws://106.12.148.121:8090/api/websocket'); // 替换为你的 WebSocket 服务器地址
 
   ws.onopen = () => {
     console.log('WebSocket连接已建立');
@@ -96,60 +96,44 @@ const formLabelAlign = reactive({
 
 
 
+ //
+ // setInterval(() => {
+ //    if (formLabelAlign.drillBitRotation==-360){
+ //      formLabelAlign.drillBitRotation_=1;
+ //    }
+ //    if (formLabelAlign.drillBitRotation==360){
+ //      formLabelAlign.drillBitRotation_=-1;
+ //    }
+ //    if (formLabelAlign.baseTranslation==-50){
+ //      formLabelAlign.baseTranslation_=1;
+ //    }
+ //    if (formLabelAlign.baseTranslation==50){
+ //      formLabelAlign.baseTranslation_=-1;
+ //    }
+ //    formLabelAlign.drillBitRotation +=formLabelAlign.drillBitRotation_;
+ //    formLabelAlign.baseTranslation +=formLabelAlign.baseTranslation_;
+ //   if (threeExample && threeExample.model) {
+ //     const Cylinder017 = threeExample.model.getObjectByName("Cylinder017");
+ //
+ //     Cylinder017 && (Cylinder017.rotation.y = formLabelAlign.drillBitRotation / 57);
+ //     // Cylinder019.rotation.y = formLabelAlign.drillBitRotation;
+ //     // Cylinder020.rotation.y = formLabelAlign.drillBitRotation;
+ //     // Cube003.rotation.y = formLabelAlign.drillBitRotation;
+ //     // Cube004.rotation.y = formLabelAlign.drillBitRotation;
+ //   }
+ //   if (threeExample && threeExample.model) {
+ //     const Cube002 = threeExample.model.getObjectByName("Cube002");
+ //
+ //     Cube002 && (Cube002.position.x = formLabelAlign.baseTranslation / 72);
+ //   }
+ //
+ //
+ //    }, 50); // 设置间隔为50毫秒
 
- setInterval(() => {
-    if (formLabelAlign.drillBitRotation==-360){
-      formLabelAlign.drillBitRotation_=1;
-    }
-    if (formLabelAlign.drillBitRotation==360){
-      formLabelAlign.drillBitRotation_=-1;
-    }
-    if (formLabelAlign.baseTranslation==-50){
-      formLabelAlign.baseTranslation_=1;
-    }
-    if (formLabelAlign.baseTranslation==50){
-      formLabelAlign.baseTranslation_=-1;
-    }
-    formLabelAlign.drillBitRotation +=formLabelAlign.drillBitRotation_;
-    formLabelAlign.baseTranslation +=formLabelAlign.baseTranslation_;
-   if (threeExample && threeExample.model) {
-     const Cylinder017 = threeExample.model.getObjectByName("Cylinder017");
-
-     Cylinder017 && (Cylinder017.rotation.y = formLabelAlign.drillBitRotation / 57);
-     // Cylinder019.rotation.y = formLabelAlign.drillBitRotation;
-     // Cylinder020.rotation.y = formLabelAlign.drillBitRotation;
-     // Cube003.rotation.y = formLabelAlign.drillBitRotation;
-     // Cube004.rotation.y = formLabelAlign.drillBitRotation;
-   }
-   if (threeExample && threeExample.model) {
-     const Cube002 = threeExample.model.getObjectByName("Cube002");
-
-     Cube002 && (Cube002.position.x = formLabelAlign.baseTranslation / 72);
-   }
 
 
-    }, 50); // 设置间隔为50毫秒
 
 
-const modelParamsChange = () => {
-    if (threeExample && threeExample.model) {
-        const Cylinder017 = threeExample.model.getObjectByName("Cylinder017");
-
-        Cylinder017 && (Cylinder017.rotation.y = formLabelAlign.drillBitRotation / 57);
-        // Cylinder019.rotation.y = formLabelAlign.drillBitRotation;
-        // Cylinder020.rotation.y = formLabelAlign.drillBitRotation;
-        // Cube003.rotation.y = formLabelAlign.drillBitRotation;
-        // Cube004.rotation.y = formLabelAlign.drillBitRotation;
-    }
-}
-
-const baseTranslationChange = () => {
-    if (threeExample && threeExample.model) {
-        const Cube002 = threeExample.model.getObjectByName("Cube002");
-
-        Cube002 && (Cube002.position.x = formLabelAlign.baseTranslation / 72);
-    }
-}
 
 onMounted(() => {
     if (threeCanvas.value) {
