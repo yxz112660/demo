@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/ws": "^8.5.10",
+    "echarts": "^5.5.0",
     "element-plus": "^2.4.4",
     "three": "^0.160.0",
     "vue": "^3.3.11"

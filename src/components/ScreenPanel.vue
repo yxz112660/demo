@@ -45,8 +45,11 @@ const props = defineProps<{
 }
 
 .body {
-    width: 454px;
-    height: 283px;
+    width: 434px;
+    height: 243px;
+    
+    padding: 10px;
+    padding-top: 30px;
 
     position: absolute;
     bottom: 0px;

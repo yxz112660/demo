@@ -1,20 +1,50 @@
 <template>
-    <div class="container" :style="{ backgroundImage: `url(${ ScreenBackground })` }">
+    <div class="container" :style="{ height: `${screenHeight}px`,backgroundImage: `url(${ ScreenBackground })` }">
         <ScreenHeader class="screen-header" />
-        <ScreenPanel class="screen-panel-1" :title="'多种图形展示样式'"></ScreenPanel>
-        <ScreenPanel class="screen-panel-2" :title="'饼状图展示样式'"></ScreenPanel>
-        <ScreenPanel class="screen-panel-3" :title="'柱状图展示样式'"></ScreenPanel>
-        <ScreenPanel class="screen-panel-4" :title="'本周完成情况汇总'"></ScreenPanel>
-        <ScreenPanel class="screen-panel-5" :title="'柱状图展示样式'"></ScreenPanel>
+        <ScreenPanel class="screen-panel-1" :title="'多种图形展示样式'">
+            <ScreenChart1 />
+        </ScreenPanel>
+        <ScreenPanel class="screen-panel-2" :title="'饼状图展示样式'">
+            <ScreenChart2 />
+        </ScreenPanel>
+        <ScreenPanel class="screen-panel-3" :title="'柱状图展示样式'">
+            <ScreenChart3 />
+        </ScreenPanel>
+        <ScreenPanel class="screen-panel-4" :title="'本周完成情况汇总'">
+            <ScreenChart4 />
+        </ScreenPanel>
+        <ScreenPanel class="screen-panel-5" :title="'柱状图展示样式'">
+            <ScreenChart5 />
+        </ScreenPanel>
         <ScreenPanel class="screen-panel-6" :title="'柱状图展示样式'"></ScreenPanel>
     </div>
 </template>
 <script setup lang="ts">
+import { onMounted, onUnmounted, ref } from 'vue';
 import { Store } from '../Store';
 import ScreenHeader from '../components/ScreenHeader.vue';
 import ScreenPanel from '../components/ScreenPanel.vue';
 
+import ScreenChart1 from '../charts/ScreenChart1.vue';
+import ScreenChart2 from '../charts/ScreenChart2.vue';
+import ScreenChart3 from '../charts/ScreenChart3.vue';
+import ScreenChart4 from '../charts/ScreenChart4.vue';
+import ScreenChart5 from '../charts/ScreenChart5.vue';
+
 const ScreenBackground = Store.assetsMap.ScreenBackground.src;
+const screenHeight = ref<number>(window.innerWidth * 1080 / 1920);
+
+onMounted(() => {
+    window.addEventListener('resize', onWindowResize);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', onWindowResize);
+});
+
+const onWindowResize = () => {
+    screenHeight.value = window.innerWidth * 1080 / 1920;
+}
 </script>
 <style scoped>
 .container {
