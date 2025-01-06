@@ -3,14 +3,14 @@
         <div class="mode-container" :style="{ backgroundImage: `url(${ OperatingModeBg })` }">
             <div class="label">机器人运行模式</div>
             <div class="message-box">
-                <div class="text">{{ Store.appData.robotOperationMode }}</div>
+                <div class="text">{{ Store.appData.robotOperationMode.value }}</div>
             </div>
         </div>
         <div class="interface-icon" :style="{ backgroundImage: `url(${ OperatingModeIcon })` }"></div>
         <div class="status-container" :style="{ backgroundImage: `url(${ OperatingModeBg })` }">
             <div class="label">机器人状态</div>
             <div class="message-box">
-                <div class="text">{{ Store.appData.robotStatus }}</div>
+                <div class="text">{{ Store.appData.robotStatus.value }}</div>
             </div>
         </div>
     </div>

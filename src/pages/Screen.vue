@@ -45,14 +45,15 @@ const onWindowResize = () => {
     position: relative;
 
     background-size: cover;
+
+    overflow: hidden;
 }
 
 .three-demo {
-    width: 100vw;
-    height: 100vh;
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: 640px;
+    right: 1920px;
 }
 
 .screen-header {

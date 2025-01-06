@@ -7,9 +7,9 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 // import { FactoryAssemblySmallStl } from './objects/FactoryAssemblySmallStl';
 // import { FactoryAssemblySmallPly } from './objects/FactoryAssemblySmallPly';
 // import { FbxViewer } from './objects/FbxViewer';
-// import { ThreeMFViewer } from './objects/3MFViewer';
+import { ThreeMFViewer } from './objects/3MFViewer';
 // import { MillGltf } from './objects/MillGltf';
-import { GLBViewer } from './objects/GLBViewer';
+// import { GLBViewer } from './objects/GLBViewer';
 
 export interface IThreeExampleOption {
     canvas: HTMLCanvasElement
@@ -39,62 +39,67 @@ export class ThreeExample {
         this.scene.add(new THREE.HemisphereLight(0x8d7c7c, 0x494966, 3));
 
         this.camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 100);
-        this.camera.position.set(2, 3, 1.5);
+        this.camera.position.set(-1.42, 1.74, -1.06);
         // this.camera.position.set(-18, 8, -5);
 
+        (window as any).thisScene = this.scene;
         (window as any).thisCamera = this.camera;
 
         this.orbitControls = new OrbitControls(this.camera, this.canvas);
-        this.orbitControls.target.set(-10, 1, -2);
+        this.orbitControls.target.set(0, 0, 0);
         this.orbitControls.update();
         this.orbitControls.enablePan = false;
         this.orbitControls.enableDamping = true;
 
-        // const threeMFViewer = new ThreeMFViewer("/jsm/FactoryAssembly-1210-small.3MF");
-        const glbViewer = new GLBViewer("jsm/BiomassFactory.glb");
-        // threeMFViewer.addEventListener("init", () => {
-        //     this.model = threeMFViewer.model;
+        (window as any).thisOrbitControls = this.orbitControls;
 
-        //     console.log(this.model);
-
-
-        //     if (this.model) {
-        //         (window as any).thisModel = this.model;
-        //         this.scene.add(this.model);
-
-        //         this.model.position.set(-2, 1, 0.5);
-        //         this.camera.lookAt(this.model.position);
-
-        //         this.animate();
-        //     }
-        // });
-
-        glbViewer.addEventListener("init", () => {
-            this.model = glbViewer.model;
+        const threeMFViewer = new ThreeMFViewer("jsm/青岛.3MF");
+        // const glbViewer = new GLBViewer("jsm/BiomassFactory.glb");
+        threeMFViewer.addEventListener("init", () => {
+            this.model = threeMFViewer.model;
 
             console.log(this.model);
 
 
             if (this.model) {
-                this.model.scale.set(0.1, 0.1, 0.1);
-
+                (window as any).thisModel = this.model;
                 this.scene.add(this.model);
 
-                (window as any).thisModel = this.model;
-                this.model.position.set(-10, 0, -1.5);
-                (async () => {
-                    for (const item of (this as any).model.children) {
-                        item.material && item.name != "Mesh166" && (item.material.wireframe = true);
-                        item.material && item.name != "Mesh166" && (item.material.color.set(0.06, 0.5, 0.8));
-                        if (item.name === "Mesh") {
-                            item.visible = false;
-                        }
-                    }
-                })();
+                this.model.position.set(0, 0, 0);
+                this.camera.lookAt(this.model.position);
+
+                document.getElementById('three-background')!.style.backgroundColor = "#000";
 
                 this.animate();
             }
         });
+
+        // glbViewer.addEventListener("init", () => {
+        //     this.model = glbViewer.model;
+
+        //     console.log(this.model);
+
+
+        //     if (this.model) {
+        //         this.model.scale.set(0.1, 0.1, 0.1);
+
+        //         this.scene.add(this.model);
+
+        //         (window as any).thisModel = this.model;
+        //         this.model.position.set(-10, 0, -1.5);
+        //         (async () => {
+        //             for (const item of (this as any).model.children) {
+        //                 item.material && item.name != "Mesh166" && (item.material.wireframe = true);
+        //                 item.material && item.name != "Mesh166" && (item.material.color.set(0.06, 0.5, 0.8));
+        //                 if (item.name === "Mesh") {
+        //                     item.visible = false;
+        //                 }
+        //             }
+        //         })();
+
+        //         this.animate();
+        //     }
+        // });
 
         // const millGltf = new MillGltf();
         // millGltf.addEventListener('init', () => {

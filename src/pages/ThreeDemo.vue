@@ -1,4 +1,5 @@
 <template>
+    <div class="background" id="three-background"></div>
     <canvas class="three-canvas" ref="threeCanvas"></canvas>
     <div class="control-container">
         <el-form :label-position="'left'" label-width="100px" :model="formLabelAlign" style="max-width: 460px">
@@ -79,8 +80,6 @@ const formLabelAlign = reactive({
     baseTranslation_: 1,
 })
 
-
-
 // const setDrillBitRotationPolling = () => {
 //   setTimeout(() => {
 //     if (formLabelAlign.drillBitRotation < 360) {
@@ -156,10 +155,23 @@ console.log(threeExample);
 </script>
 
 <style scoped>
-.three-canvas {
+.background {
+    position: absolute;
     width: 100vw;
     height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.three-canvas {
+    width: 1680px;
+    height: 100vh;
     display: block;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 240px;
+    right: 1920px;
 }
 
 .control-container {
