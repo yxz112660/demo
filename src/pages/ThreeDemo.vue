@@ -164,14 +164,14 @@ console.log(threeExample);
 }
 
 .three-canvas {
-    width: 1680px;
-    height: 100vh;
+    width: 1920px;
+    height: 806px;
     display: block;
     position: absolute;
-    top: 0px;
+    top: 274px;
     bottom: 0px;
-    left: 240px;
-    right: 1920px;
+    left: 0px;
+    right: 0px;
 }
 
 .control-container {

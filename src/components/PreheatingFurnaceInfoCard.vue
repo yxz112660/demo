@@ -6,12 +6,12 @@
         <div class="content-container" :style="{ backgroundImage: `url(${ PreheatingFurnaceBg })` }">
             <div class="list-container">
                 <div class="row" v-for="(data, index) in listData" :style="index % 2 === 0 ? { backgroundImage: `url(${ ListBg })` } : {}">
-                    <div class="column white">温度{{ index + 1 }}</div>
-                    <div class="column blue">{{ data.temperature }}</div>
+                    <div class="column white" style="width: 42px; flex-grow: unset; flex-shrink: 0;">温度{{ index + 1 }}</div>
+                    <div class="column blue" style="width: 42px; flex-grow: unset; flex-shrink: 0;">{{ data.temperature }}</div>
                     <div class="column white">生产产品{{ index + 1 }}</div>
                     <div class="column blue">{{ data.product }}</div>
                     <div class="column white">已焙烧时间{{ index + 1 }}</div>
-                    <div class="column blue">{{ data.roastedTime }}</div>
+                    <div class="column blue" style="width: 52px; flex-grow: unset; flex-shrink: 0;">{{ data.roastedTime }}</div>
                 </div>
             </div>
         </div>
@@ -28,12 +28,12 @@ const listData = Store.appData.preheatingFurnaceList;
 </script>
 <style scoped>
 .card-container {
-    width: 750px;
-    height: 478px;
+    width: 557px;
+    height: 179px;
 }
 
 .header-container {
-    width: 750px;
+    width: 557px;
     height: 42px;
     background-size: 100% 100%;
     position: absolute;
@@ -57,8 +57,8 @@ const listData = Store.appData.preheatingFurnaceList;
 }
 
 .content-container {
-    width: 750px;
-    height: 450px;
+    width: 557px;
+    height: 151px;
     background-size: 100% 100%;
     position: absolute;
     top: 28px;
@@ -66,15 +66,16 @@ const listData = Store.appData.preheatingFurnaceList;
 }
 
 .content-container .list-container {
-    width: 708px;
-    height: 409px;
+    width: 515px;
+    height: 103px;
     position: absolute;
     top: 24px;
     left: 21px;
+    overflow: auto;
 }
 
 .content-container .list-container .row {
-    width: 708px;
+    width: 515px;
     height: 35px;
     background-size: 100% 100%;
     display: flex;

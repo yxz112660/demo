@@ -35,7 +35,7 @@ export const insulationWarehouseData: any = {
 for (let i = 0; i < 6; i++) {
     insulationWarehouseData.insulationWarehouseList.push({
         temperature: (30 + i) + '℃',
-        product: 'XXXXXXXXXX',
+        product: 'XXXXXX',
         roastedTime: (20 + i) + 'min'
     });
 }

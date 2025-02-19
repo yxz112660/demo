@@ -39,7 +39,7 @@ export class ThreeExample {
         this.scene.add(new THREE.HemisphereLight(0x8d7c7c, 0x494966, 3));
 
         this.camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 100);
-        this.camera.position.set(-1.42, 1.74, -1.06);
+        this.camera.position.set(0, 2.13, 1.28);
         // this.camera.position.set(-18, 8, -5);
 
         (window as any).thisScene = this.scene;
@@ -53,7 +53,7 @@ export class ThreeExample {
 
         (window as any).thisOrbitControls = this.orbitControls;
 
-        const threeMFViewer = new ThreeMFViewer("jsm/青岛.3MF");
+        const threeMFViewer = new ThreeMFViewer("jsm/青岛-20250121.3MF");
         // const glbViewer = new GLBViewer("jsm/BiomassFactory.glb");
         threeMFViewer.addEventListener("init", () => {
             this.model = threeMFViewer.model;
@@ -155,6 +155,6 @@ export class ThreeExample {
         this.canvas.height = this.canvas.clientHeight * devicePixelRatio;
 
         this.renderer.setPixelRatio(devicePixelRatio);
-        this.renderer.setSize(window.innerWidth, window.innerHeight);
+        this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
     }
 }
