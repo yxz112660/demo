@@ -6,7 +6,7 @@ class AssetsItem {
 export class AssetsMap {
     ScreenHeaderBackground: AssetsItem = {
         type: 'image',
-        src: 'images/header_title.png'
+        src: 'images/header_component6@2x.png'
     };
     ScreenPanelBoxBackground: AssetsItem = {
         type: 'image',

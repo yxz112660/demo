@@ -54,7 +54,7 @@ const listData = Store.appData.insulationWarehouseList;
     font-style: normal;
     position: absolute;
     top: 4px;
-    left: 52px;
+    left: 36px;
 }
 
 .content-container {

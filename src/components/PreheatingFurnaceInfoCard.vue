@@ -53,7 +53,7 @@ const listData = Store.appData.preheatingFurnaceList;
     font-style: normal;
     position: absolute;
     top: 4px;
-    left: 72px;
+    left: 48px;
 }
 
 .content-container {
