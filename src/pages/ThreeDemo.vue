@@ -164,7 +164,7 @@ console.log(threeExample);
 }
 
 .three-canvas {
-    width: 1920px;
+    width: 100vw;
     height: 806px;
     display: block;
     position: absolute;

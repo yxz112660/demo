@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+// import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
 // import { MillGltf } from './objects/MillGltf';
 // import { FactoryAssemblySmallStl } from './objects/FactoryAssemblySmallStl';
@@ -31,11 +31,11 @@ export class ThreeExample {
 
         this.initCanvasSize();
 
-        const pmremGenerator = new THREE.PMREMGenerator(this.renderer);
+        // const pmremGenerator = new THREE.PMREMGenerator(this.renderer);
 
         this.scene = new THREE.Scene();
-        this.scene.background = new THREE.Color(0x00000000);
-        this.scene.environment = pmremGenerator.fromScene(new RoomEnvironment(this.renderer), 0.04).texture;
+        // this.scene.background = new THREE.Color(0x00000000);
+        // this.scene.environment = pmremGenerator.fromScene(new RoomEnvironment(this.renderer), 0.04).texture;
         this.scene.add(new THREE.HemisphereLight(0x8d7c7c, 0x494966, 3));
 
         this.camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 100);
@@ -68,11 +68,13 @@ export class ThreeExample {
                 this.model.position.set(0, 0, 0);
                 this.camera.lookAt(this.model.position);
 
-                document.getElementById('three-background')!.style.backgroundColor = "#000";
+                // document.getElementById('three-background')!.style.backgroundColor = "#000";
 
                 this.animate();
             }
         });
+
+        // this.animate();
 
         // glbViewer.addEventListener("init", () => {
         //     this.model = glbViewer.model;

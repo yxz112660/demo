@@ -1,5 +1,5 @@
 <template>
-    <div class="container" :style="{ height: `${screenHeight}px` }">
+    <div class="container" :style="{ height: `${screenHeight}px`, backgroundImage: `url(${ ScreenBackground })` }">
         <ThreeDemo class="three-demo" />
         <ScreenHeader class="screen-header" />
         <RobotInfoCard class="robot-info-card" />
@@ -22,7 +22,7 @@ import VacuumFurnaceInfoCard from '../components/VacuumFurnaceInfoCard.vue';
 import PreheatingFurnaceInfoCard from '../components/PreheatingFurnaceInfoCard.vue';
 import InsulationWarehouseInfoCard from '../components/InsulationWarehouseInfoCard.vue';
 
-// const ScreenBackground = Store.assetsMap.ScreenBackground.src;
+const ScreenBackground = Store.assetsMap.ScreenBackground.src;
 const screenHeight = ref<number>(window.innerWidth * 1080 / 1920);
 
 onMounted(() => {
@@ -45,7 +45,6 @@ const onWindowResize = () => {
     position: relative;
 
     background-size: cover;
-    background-color: #000000;
 
     overflow: hidden;
 }
