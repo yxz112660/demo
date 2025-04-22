@@ -53,7 +53,7 @@ export class ThreeExample {
 
         (window as any).thisOrbitControls = this.orbitControls;
 
-        const threeMFViewer = new ThreeMFViewer("jsm/数字孪生用总装图20250413(1).3MF");
+        const threeMFViewer = new ThreeMFViewer("jsm/数字孪生用总装图-1210 - 更改夹具.3MF");
         // const glbViewer = new GLBViewer("jsm/BiomassFactory.glb");
         threeMFViewer.addEventListener("init", () => {
             this.model = threeMFViewer.model;
