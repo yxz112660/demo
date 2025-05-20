@@ -1,7 +1,7 @@
 <template>
     <div class="card-container" :style="{ backgroundImage: `url(${ VacuumFurnaceBg })` }">
         <div class="current-label">真空炉当前产品</div>
-        <div class="current-value">{{ Store.appData.vacuumFurnaceCurrentProduct }}</div>
+        <div class="current-value">{{ Store.appData.vacuumFurnaceCurrentProduct.value }}</div>
         <div class="divider"></div>
         <div class="time-label">真空炉已熔炼时间</div>
         <div class="time-value">{{ Store.appData.vacuumFurnaceMeltingTime }}min</div>

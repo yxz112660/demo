@@ -12,7 +12,7 @@ export const planData = {
 };
 
 export const vacuumFurnaceData = {
-    vacuumFurnaceCurrentProduct: "XXXXXXXXXX",
+    vacuumFurnaceCurrentProduct: "涡轮叶片",
     vacuumFurnaceMeltingTime: 40
 };
 
@@ -20,22 +20,42 @@ export const preheatingFurnaceData: any = {
     preheatingFurnaceList: []
 }
 
-for (let i = 0; i < 12; i++) {
-    preheatingFurnaceData.preheatingFurnaceList.push({
-        temperature: (30 + i) + '℃',
-        product: 'XXXXXXXXXX',
-        roastedTime: (20 + i) + 'min'
-    });
-}
+preheatingFurnaceData.preheatingFurnaceList.push({
+    temperature: 200 + '℃',
+    product: '玻璃纤维',
+    roastedTime: 120 + 'min'
+});
+
+preheatingFurnaceData.preheatingFurnaceList.push({
+    temperature: 500 + '℃',
+    product: '钛合金',
+    roastedTime: 120 + 'min'
+});
+
+preheatingFurnaceData.preheatingFurnaceList.push({
+    temperature: 800 + '℃',
+    product: '钴基',
+    roastedTime: 120 + 'min'
+});
 
 export const insulationWarehouseData: any = {
     insulationWarehouseList: []
 };
 
-for (let i = 0; i < 6; i++) {
-    insulationWarehouseData.insulationWarehouseList.push({
-        temperature: (30 + i) + '℃',
-        product: 'XXXXXX',
-        roastedTime: (20 + i) + 'min'
-    });
-}
+insulationWarehouseData.insulationWarehouseList.push({
+    temperature: 650 + '℃',
+    product: '高速钢',
+    roastedTime: 105 + 'min'
+});
+
+insulationWarehouseData.insulationWarehouseList.push({
+    temperature: 440 + '℃',
+    product: '铝合金',
+    roastedTime: '14h'
+});
+
+insulationWarehouseData.insulationWarehouseList.push({
+    temperature: 630 + '℃',
+    product: '不锈钢',
+    roastedTime: '80min'
+});

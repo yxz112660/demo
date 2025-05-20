@@ -1,7 +1,7 @@
 <template>
     <div class="header-container" :style="{ backgroundImage: `url(${ ScreenHeaderBackground })` }">
-        <div class="title">智慧园区动态实时看板</div>
-        <div class="sub-title">Smart Park Dynamic Real time Signboard</div>
+        <div class="title">数字孪生系统</div>
+        <div class="sub-title">Digital Twin Real time System</div>
         <div class="time"></div>
         <div class="date"></div>
         <div class="week"></div>
