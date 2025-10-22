@@ -18,7 +18,7 @@ export class AssetsMap {
     };
     ScreenBackground: AssetsItem = {
         type: 'image',
-        src: 'images/bg.jpg'
+        src: 'images/bg.png'
     };
     OperatingModeBg: AssetsItem = {
         type: 'image',
@@ -59,6 +59,10 @@ export class AssetsMap {
     PreheatingFurnaceTitle: AssetsItem = {
         type: 'image',
         src: 'images/preheatingFurnace_title@2x.png'
+    };
+    PreheatingFurnaceTitle2: AssetsItem = {
+        type: 'image',
+        src: 'images/preheatingFurnace_title@3x.png'
     };
     StateBg: AssetsItem = {
         type: 'image',

@@ -1,5 +1,5 @@
 <template>
-    <div class="header-container" :style="{ backgroundImage: `url(${ ScreenHeaderBackground })` }">
+    <div class="header-container" :style="{ backgroundImage: `url(${ ScreenHeaderBackground })`,backgroundSize: '100% 100%',backgroundRepeat: 'no-repeat'}">
         <div class="title">数字孪生系统</div>
         <div class="sub-title">Digital Twin Real time System</div>
         <div class="time"></div>
@@ -18,11 +18,11 @@ const ScreenHeaderBackground = Store.assetsMap.ScreenHeaderBackground.src;
 
     position: relative;
 
-    background-size: cover;
 }
 
 .title {
-    background-image: linear-gradient(to bottom, #ffffff, #d5f7ff);
+    /* background-image: linear-gradient(to bottom, #ffffff, #d5f7ff); */
+    background: linear-gradient(90deg, #17A0F3 0%, #016EAE 100%);
     -webkit-background-clip: text; /* 用于 Safari 浏览器 */
     color: transparent; /* 隐藏文字原本颜色 */
     font-size: 32px;

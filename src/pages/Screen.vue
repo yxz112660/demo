@@ -66,19 +66,19 @@ const onWindowResize = () => {
 
 .robot-info-card {
     position: absolute;
-    top: 95px;
+    top: 125px;
     left: 12px;
 }
 
 .plan-info-card {
     position: absolute;
-    top: 95px;
+    top: 125px;
     left: 372px;
 }
 
 .vacuum-furnace-info-card {
     position: absolute;
-    top: 233px;
+    top: 260px;
     left: 12px;
 }
 

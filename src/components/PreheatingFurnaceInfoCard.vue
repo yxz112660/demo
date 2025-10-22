@@ -1,12 +1,12 @@
 <template>
     <div class="card-container">
-        <div class="header-container" :style="{ backgroundImage: `url(${ PreheatingFurnaceTitle })` }">
-            <div class="title">预热炉</div>
+        <div class="header-container">
+            <div class="title"  :style="{ backgroundImage: `url(${ PreheatingFurnaceTitle })` }">预热炉</div>
         </div>
-        <div class="content-container" :style="{ backgroundImage: `url(${ PreheatingFurnaceBg })` }">
+        <div class="content-container" :style="{ backgroundColor: '#ffffff'}">
             <div class="list-container">
-                <div class="row" v-for="(data, index) in listData" :style="index % 2 === 0 ? { backgroundImage: `url(${ ListBg })` } : {}">
-                    <div class="column white" style="width: 42px; flex-grow: unset; flex-shrink: 0;">温度{{ index + 1 }}</div>
+                <div class="row" v-for="(data, index) in listData">
+                    <div class="column white" style="width: 52px; flex-grow: unset; flex-shrink: 0;">温度{{ index + 1 }}</div>
                     <div class="column blue" style="width: 42px; flex-grow: unset; flex-shrink: 0;">{{ data.temperature }}</div>
                     <div class="column white">生产产品{{ index + 1 }}</div>
                     <div class="column blue">{{ data.product }}</div>
@@ -29,7 +29,7 @@ const listData = Store.appData.preheatingFurnaceList;
 <style scoped>
 .card-container {
     width: 557px;
-    height: 179px;
+    height: 199px;
 }
 
 .header-container {
@@ -42,7 +42,7 @@ const listData = Store.appData.preheatingFurnaceList;
 }
 
 .header-container .title {
-    width: 60px;
+    width: 76px;
     height: 28px;
     font-family: PingFangSC, PingFang SC;
     font-weight: 500;
@@ -53,12 +53,12 @@ const listData = Store.appData.preheatingFurnaceList;
     font-style: normal;
     position: absolute;
     top: 4px;
-    left: 48px;
+    /* left: 48px; */
 }
 
 .content-container {
     width: 557px;
-    height: 151px;
+    height: 180px;
     background-size: 100% 100%;
     position: absolute;
     top: 28px;
@@ -67,7 +67,7 @@ const listData = Store.appData.preheatingFurnaceList;
 
 .content-container .list-container {
     width: 515px;
-    height: 103px;
+    height: 133px;
     position: absolute;
     top: 24px;
     left: 21px;
@@ -92,8 +92,8 @@ const listData = Store.appData.preheatingFurnaceList;
     height: 22px;
     font-family: PingFangSC, PingFang SC;
     font-weight: 600;
-    font-size: 16px;
-    color: #E4EEF6;
+    font-size: 14px;
+    color: #999999;
     line-height: 22px;
     text-align: left;
     font-style: normal;
@@ -104,8 +104,8 @@ const listData = Store.appData.preheatingFurnaceList;
     height: 25px;
     font-family: PingFangSC, PingFang SC;
     font-weight: 600;
-    font-size: 18px;
-    color: #A8D8FA;
+    font-size: 14px;
+    color: #333333;
     line-height: 25px;
     text-align: left;
     font-style: normal;

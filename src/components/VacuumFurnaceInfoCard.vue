@@ -15,7 +15,7 @@ const VacuumFurnaceBg = Store.assetsMap.VacuumFurnaceBg.src;
 <style scoped>
 .card-container {
     width: 750px;
-    height: 41px;
+    height: 40px;
     background-size: 100% 100%;
 }
 
@@ -24,8 +24,8 @@ const VacuumFurnaceBg = Store.assetsMap.VacuumFurnaceBg.src;
     height: 22px;
     font-family: PingFangSC, PingFang SC;
     font-weight: 600;
-    font-size: 16px;
-    color: #E4EEF6;
+    font-size: 14px;
+    color: #999999;
     line-height: 22px;
     text-align: left;
     font-style: normal;
@@ -39,13 +39,13 @@ const VacuumFurnaceBg = Store.assetsMap.VacuumFurnaceBg.src;
     height: 25px;
     font-family: PingFangSC, PingFang SC;
     font-weight: 600;
-    font-size: 18px;
-    color: #A8D8FA;
+    font-size: 14px;
+    color: #0096FF;
     line-height: 25px;
     text-align: left;
     font-style: normal;
     position: absolute;
-    top: 8px;
+    top: 7px;
     left: 175px;
 }
 
@@ -66,8 +66,8 @@ const VacuumFurnaceBg = Store.assetsMap.VacuumFurnaceBg.src;
     height: 22px;
     font-family: PingFangSC, PingFang SC;
     font-weight: 600;
-    font-size: 16px;
-    color: #E4EEF6;
+    font-size: 14px;
+    color: #999999;
     line-height: 22px;
     text-align: left;
     font-style: normal;
@@ -81,13 +81,13 @@ const VacuumFurnaceBg = Store.assetsMap.VacuumFurnaceBg.src;
     height: 25px;
     font-family: PingFangSC, PingFang SC;
     font-weight: 600;
-    font-size: 18px;
-    color: #A8D8FA;
+    font-size: 14px;
+    color: #0096FF;
     line-height: 25px;
     text-align: left;
     font-style: normal;
     position: absolute;
-    top: 8px;
+    top: 7px;
     left: 556px;
 }
 </style>
